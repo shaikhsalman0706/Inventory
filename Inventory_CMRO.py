@@ -18,7 +18,7 @@ def filter_stock_data(uploaded_file):
 # Function to calculate total value
 def calculate_total_value(df_stock):
     total_value_USD = "{:,.2f}".format(df_stock["Value_USD"].sum())
-    return f"Total Value in USD: ${total_value_USD}"
+    return f"Total Reporting Inventory Value: ${total_value_USD}"
 
 
 # Function to calculate label value and plot
@@ -49,7 +49,7 @@ def calculate_fleet_value(df_stock):
         lambda x: "{:,.2f}".format(x)
     )
 
-    fleet_value_str = "Fleet Short Value in USD:<br>"
+    fleet_value_str = "Fleet Short Value:<br>"
     for index, row in fleet_value_df.iterrows():
         fleet_value_str += f"{row['COMBINED_FLEET_SHORT']} {row['Value_USD']}<br>"
 
@@ -70,7 +70,7 @@ def calculate_purchased_for_value(df_stock):
         lambda x: "{:,.2f}".format(x)
     )
 
-    purchased_for_value_str = "Purchased For Value in USD:<br>"
+    purchased_for_value_str = "Purchased For:<br>"
     for index, row in purchased_for_value_df.iterrows():
         purchased_for_value_str += f"{row['Purchased for']} {row['Value_USD']}<br>"
 
@@ -90,7 +90,7 @@ def calculate_cons_cat_value(df_stock):
         lambda x: "{:,.2f}".format(x)
     )
 
-    cons_cat_value_str = "Consumption Category Value in USD:<br>"
+    cons_cat_value_str = "Consumption Category:<br>"
     for index, row in cons_cat_value_df.iterrows():
         cons_cat_value_str += f"{row['cons_cat_new']} {row['Value_USD']}<br>"
 
@@ -110,7 +110,7 @@ def calculate_NEW_INV_LABEL_value(df_stock):
         lambda x: "{:,.2f}".format(x)
     )
 
-    NEW_INV_LABEL_value_str = "Consumption Category Value in USD:<br>"
+    NEW_INV_LABEL_value_str = "Consumption Category:<br>"
     for index, row in NEW_INV_LABEL_value_df.iterrows():
         NEW_INV_LABEL_value_str += f"{row['NEW_INV_LABEL']} {row['Value_USD']}<br>"
 
