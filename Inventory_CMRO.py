@@ -162,7 +162,7 @@ def calculate_Age_Yrs_value(df_stock):
 
 # Streamlit app
 def main():
-    st.title("Inventory Value Calculator")
+    st.title("Inventory Calculator")
 
     # Initialize session state
     if "selected_option" not in st.session_state:
