@@ -110,7 +110,7 @@ def calculate_NEW_INV_LABEL_value(df_stock):
         lambda x: "{:,.2f}".format(x)
     )
 
-    NEW_INV_LABEL_value_str = "Consumption Category:<br>"
+    NEW_INV_LABEL_value_str = "Safety Stock:<br>"
     for index, row in NEW_INV_LABEL_value_df.iterrows():
         NEW_INV_LABEL_value_str += f"{row['NEW_INV_LABEL']} {row['Value_USD']}<br>"
 
